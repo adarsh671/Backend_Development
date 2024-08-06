@@ -110,7 +110,7 @@ export const logOut = async (req, res, next) => {
     expires: new Date(Date.now()),
      secure:true,
       sameSitel:"None"
-  }).json({
+  }).json({ 
     success:true,
     messsage:"User Logged Out"
   });
