@@ -74,6 +74,8 @@ export const login = async (req, res, next) => {
       expires: new Date(
         Date.now() + process.env.COOKIE_EXPIRES * 24 * 60 * 60 * 1000
       ),
+      secure:true,
+      sameSitel:"None"
     })
     .json({
       success: true,
@@ -106,6 +108,8 @@ export const logOut = async (req, res, next) => {
   res.status(200).cookie("token", "", {
     httpOnly: true,
     expires: new Date(Date.now()),
+     secure:true,
+      sameSitel:"None"
   }).json({
     success:true,
     messsage:"User Logged Out"
